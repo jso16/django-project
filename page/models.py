@@ -6,4 +6,3 @@ class EmailNewsletter(models.Model):
     registred_at = models.DateTimeField('date published')
     def __str__(self):
         return self.email + ' ' + str(self.registred_at)
-      

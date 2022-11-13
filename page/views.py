@@ -5,5 +5,8 @@ from .models import EmailNewsletter
 
 def index(request):
     latest_email_list=EmailNewsletter.objects.order_by('-registred_at')
-    output = ', '.join([q.email for q in latest_email_list])
-    return HttpResponse(output)
+   
+    return render(request, 'page/index.html',
+    {
+        "latest_email_list":latest_email_list   
+    })
