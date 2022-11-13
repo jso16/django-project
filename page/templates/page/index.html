@@ -8,7 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="utf-8">
-        <link rel="stylesheet" href=".{% static 'page/css/style.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="{% static 'page/css/style.css' %}">
         <title> Startups</title>
     </head>
 
@@ -100,16 +101,16 @@
                 <h1>Newsletter</h1>
                 <p>assine e fique por dentro das novidades</p>
             </div>
-            <form class="newsletter-form">
-                <input type="text" placeholder="Seu e-mail">
-
-                <form method="post" >
-                <button type="submit">Assinar</button>
+            <form class="newsletter-form" action="{% url 'register_email_newslatter' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" id="email" name="email" placeholder="Seu e-mail">
+                <button id="resultado" type="submit">Assinar</button>
             </form>
         </section>
 
         <footer class="footer">
             <p>StarGest © Todos os direitos reservados</p>
         </footer>
+        <!-- <script src="{% static 'page/js/main.js' %}"></script> -->
     </body>
 </html>
