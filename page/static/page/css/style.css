@@ -20,6 +20,11 @@ img{
     display: block;
     max-width: 100%;
 }
+
+p {
+	text-align: justify;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -97,6 +102,14 @@ img{
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 60px 10px;
+	padding-bottom: 10px;
+}
+
+.subtitulo {
+	padding: 24px 10px;
+    margin: 0 auto;
+    line-height: 1;
+    max-width: 960px;
 }
 
 /*Sobre*/
@@ -108,7 +121,8 @@ img{
 	margin: 0 auto;
 	padding: 60px 0;
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .sobre-info {
@@ -129,8 +143,12 @@ img{
 }
 
 .sobre-img {
-	flex: 1 1 160px;
 	margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 /*História*/
