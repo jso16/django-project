@@ -299,7 +299,7 @@ p {
 	border-radius: 0px;
 }
 
-.newsletter-form button {
+.newsletter-form a {
 	flex: 1 1 260px;
 	font-family: "Nunito", Helvetica, Arial, sans-serif;
 	font-size: 2.25em;
@@ -314,7 +314,7 @@ p {
 }
 
 @media (max-width: 600px) {
-	.newsletter-form button {
+	.newsletter-form a {
 		font-size: 1.5em;
 	}
 }
